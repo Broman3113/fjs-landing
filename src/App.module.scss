@@ -1,0 +1,495 @@
+@font-face {
+  font-family: 'Dancing Script';
+  src: url(./assets/fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+.Hero {
+  padding: 180px 0;
+  display: flex;
+  justify-content: center;
+  background-image: url("./assets/heroBgLeft.png"), url("./assets/heroBgRight.png");
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: auto;
+  @media (max-width: 1300px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/heroBgLeft.png");
+    background-position: center;
+  }
+  @media (max-width: 400px) {
+    padding: 120px 0;
+  }
+}
+
+.HeroWrapper {
+
+
+}
+
+.HeroHeader {
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  @media (max-width: 1300px) {
+    .PrimaryColor {
+      color: #93e152;
+    }
+    color: var(--white);
+  }
+}
+
+.HeroDescription {
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.15px;
+  margin-bottom: 30px;
+  @media (max-width: 1300px) {
+    color: var(--white);
+  }
+}
+
+.PrimaryColor {
+  color: var(--primary);
+}
+
+.HeroBtns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.HeroBtn {
+  max-width: 209px;
+  width: 100%;
+  display: flex;
+  padding: 14px 0 !important;
+  justify-content: center;
+}
+
+.Demo {
+  background-color: #F5F5F5;
+  padding: 78px 0;
+}
+
+.SlideItem {
+  display: flex;
+  justify-content: center;
+}
+
+.SlideImage {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.About {
+  padding: 120px 0;
+  @media (max-width: 1070px) {
+    padding: 80px 0 100px;
+  }
+}
+
+.Features{
+  //padding-bottom: 94px;
+}
+
+// Price section
+.Price{
+  padding-top: 94px;
+  padding-bottom: 150px;
+  @media (max-width: 700px) {
+    padding-bottom: 94px;
+  }
+}
+.PriceDescription{
+  position: relative;
+  margin-bottom: 68px;
+  &::before {
+    content: "get 7 days free";
+    font-weight: 700;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    transform: rotate(-10.06deg);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+  }
+}
+.SubscriptionSwitcher{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 67px;
+  padding-bottom: 57px;
+}
+.SwitchText{
+
+}
+.SubscriptionsList{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+  gap: 57px;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.SubscriptionCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+  border: 2.5px solid rgba(0, 0, 0, 0.87);
+  border-radius: 10px;
+  padding: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover{
+    background: var(--dark);
+    color: var(--white);
+    .SubscriptionDuration, .SubscriptionAdvantage{
+      color: #DDD
+    }
+    .SubscriptionStart {
+        background: var(--white);
+        color: var(--dark);
+      &:hover{
+        outline: 1px solid var(--white);
+        background: transparent;
+        color: var(--white);
+      }
+    }
+  }
+}
+.SubscriptionTitle{
+  font-weight: 700;
+  font-size: 27.456px;
+  line-height: 37px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.SubscriptionPrice{
+  font-weight: 800;
+  font-size: 73.216px;
+  line-height: 100px;
+  text-align: center;
+}
+.SubscriptionDuration{
+  line-height: 22px;
+  color: #747474;
+  margin-bottom: 24px;
+}
+.SubscriptionStart {
+  padding: 14px 0 !important;
+  max-width: 209px;
+  width: 100%;
+}
+.SubscriptionCardSeparator{
+  border-top: 1px solid #DDD;
+  max-width: 114px;
+  width: 100%;
+  margin: 40px 0 27px;
+}
+.SubscriptionAdvantagesList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+// About section
+.AboutWrapper {
+  background: url("./assets/aboutFeaturesBg.png") no-repeat right 100%;
+  @media (max-width: 1070px) {
+    background: none;
+    .AboutFeaturesWrapper {
+      padding: 50px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.SectionHeading {
+  display: block;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 1.195;
+  text-align: center;
+  letter-spacing: 0.6px;
+  max-width: 535px;
+  margin: 0 auto 17px;
+}
+
+.SectionDescription {
+  display: block;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.15px;
+  max-width: 455px;
+}
+
+.AboutFeaturesWrapper {
+  padding: 154px 0 130px;
+}
+
+.AboutFeatures {
+  max-width: 471px;
+
+}
+
+.Features {
+
+}
+
+.FeaturesHeading {
+  position: relative;
+
+  &::before {
+    content: url("./assets/curveLine1.png");
+    position: absolute;
+    left: -30%;
+    top: -100%;
+  }
+}
+
+.FeaturesList {
+  margin-top: 59px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.FeaturesItem {
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  padding: 20px 37px 37px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-bottom: 13px;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 127.5%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+.Survey {
+  padding: 65px 0 94px;
+  background: var(--dark) url("./assets/survey/surveyBg.png") no-repeat center;
+}
+
+.SurveyHeading {
+  position: relative;
+  color: var(--white);
+  max-width: 633px;
+
+  &::before {
+    content: url("./assets/paperSaleLabel.png");
+    position: absolute;
+    left: -10px;
+    top: 90%;
+    @media (max-width: 668px) {
+      display: none;
+    }
+  }
+}
+
+.SurveyDescription {
+  color: var(--white);
+  margin-bottom: 51px;
+}
+
+.SurveyCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 57px 0 46px;
+  background-color: var(--white);
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  max-width: 348px;
+
+  img {
+    margin-bottom: 65px;
+  }
+
+  &::before {
+    content: url("./assets/curveLine2.png");
+    position: absolute;
+    left: -80%;
+    bottom: -50px;
+  }
+
+  &::after {
+    content: url("./assets/curveLine3.png");
+    position: absolute;
+    right: -50%;
+    top: -20px;
+  }
+
+  @media (max-width: 720px) {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.SurveyDiscountBtn {
+  padding: 14px 0 !important;
+  max-width: 209px;
+  width: 100%;
+}
+
+// Faq section
+
+.Faq {
+  padding: 110px 0 160px;
+}
+
+.FaqItem {
+  margin-bottom: 20px;
+}
+
+.FaqDescriptionWrapper {
+  position: relative;
+  height: 50px;
+  &::before {
+    content: url("./assets/curveLine4.png");
+    position: absolute;
+    right: 10%;
+    top: -65px;
+    @media (max-width: 1060px) {
+      right: 0;
+    }
+    @media (max-width: 800px) {
+      right: 10%;
+      top: -170px;
+    }
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+}
+
+.FaqDescription {
+  margin-bottom: 70px;
+  width: 100%;
+
+}
+
+.FaqList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+
+  gap: 10px;
+  //columns: 2 100px;
+  //column-gap: 1rem;
+  //li {
+  //  width: 150px;
+  //  margin: 0 1rem 1rem 0;
+  //  display: inline-block;
+  //  width: 100%;
+  //}
+}
+
+// Contact section
+
+.Contact {
+  padding: 77px 0 106px;
+
+  .SectionHeading, .SectionDescription {
+    text-align: left;
+    margin: 0;
+  }
+
+  .SectionHeading {
+    margin: 0 0 18px;
+  }
+
+  .SectionDescription {
+    margin: 0 0 35px;
+  }
+
+  background: #F5F5F5 url("./assets/image13.png") no-repeat 80% center;
+  @media (max-width: 820px) {
+    background: #F5F5F5;
+  }
+}
+
+.ContactWrapper {
+  display: flex;
+  //grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 123px;
+}
+
+.ContactForm {
+  position: relative;
+  border-radius: 15px;
+  padding: 30px 30px 40px;
+
+  &::before {
+    content: url("./assets/curveLine5.png");
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+
+  @media (max-width: 1760px) {
+    box-shadow: 6px 0 10px -5px rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+  }
+  @media (max-width: 820px) {
+    width: 100%;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+}
+
+.ContactDescription {
+  max-width: 373px;
+}
+
+.AppPreview {
+  @media (max-width: 820px) {
+    display: none;
+  }
+}
+
+.SubmitContactForm {
+  max-width: 160px;
+  width: 100%;
+  padding: 14px 0 !important;
+}

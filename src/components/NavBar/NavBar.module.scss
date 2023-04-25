@@ -1,0 +1,144 @@
+
+.NavBar {
+  background: #212121;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.NavBarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LogoWrapper {
+  padding: 23px 0;
+}
+
+.Logo {
+  width: 97px;
+  fill: #fff;
+}
+
+.NavLinksList {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.ControlsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+
+.LanguageSelectionBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.NavBarInnerMobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+
+  .LogoWrapper {
+    padding: 0;
+  }
+
+  .BurgerMenuIcon, .CloseIcon {
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+  }
+
+  .BurgerMenuBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .BurgerMenuBtnLine {
+      width: 20px;
+      height: 2px;
+      background: #fff;
+    }
+  }
+}
+
+.MobileMenu {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 73px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #212121;
+  transform: translateX(-100%);
+  transition: opacity .25s cubic-bezier(0.4, 0, 0.2, 1), visibility .25s cubic-bezier(0.4, 0, 0.2, 1), transform .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MobileMenu.Open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.MobileNavLinksList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 30px 0;
+  font-size: 24px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.NavBar {
+  @media (max-width: 992px) {
+    .NavBarInner {
+      display: none;
+    }
+    .NavBarInnerMobile {
+      display: flex;
+    }
+
+  }
+  @media (min-width: 993px) {
+    .MobileMenu.Open {
+      display: none;
+    }
+  }
+}

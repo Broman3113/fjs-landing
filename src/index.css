@@ -1,0 +1,46 @@
+:root {
+  --dark: #212121;
+  --white: #FFFFFF;
+  --primary: #7EC246;
+
+  --button-dark: #000000;
+  --sidebar-color: #FFFFFF;
+  --bg-grey-100: #F5F5F5;
+  --text-color: #000000;
+  --separator-color: #F0F0F0;
+  --logout-btn: #F6F7F8;
+  --filter-sidebar-bg: #F5F5F5;
+  --filter-sidebar-btn-active: #FFFFFF;
+}
+[data-theme="dark"] {
+  --white: #000000;
+  --button-dark: #1E272E;
+  --sidebar-color: #2B333A;
+  --bg-grey-100: #2B333A;
+  --text-color: #FFFFFF;
+  --separator-color: #272F36;
+  --logout-btn: #1E272E;
+  --filter-sidebar-bg: #1E2429;
+  --filter-sidebar-btn-active: #0F1519;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1174px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, button, input, textarea, select, label, span, div {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}

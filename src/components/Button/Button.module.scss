@@ -1,0 +1,70 @@
+.Button {
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 13px;
+  border: none;
+  line-height: 1.69;
+  border-radius: 4px;
+  letter-spacing: 0.46px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--white);
+  transition: color .3s cubic-bezier(0.4, 0, 0.2, 1),
+  background-color .3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+    align-items: center;
+  justify-content: center;
+  gap: 4px;
+  svg {
+    fill: currentColor;
+  }
+}
+
+.primary {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--dark);
+  border: 1px solid var(--dark);
+  border-radius: 4px;
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--dark);
+  border-color: var(--dark);
+
+  &:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    outline: 1px solid var(--white);
+    outline-offset: -1px;
+  }
+}
+
+.dark {
+    background-color: var(--dark);
+    color: var(--white);
+    border-color: var(--white);
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--dark);
+      outline: 1px solid var(--dark);
+      outline-offset: -1px;
+    }
+}
+
+[data-theme="dark"] {
+  .dark{
+    background-color: #fff;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
